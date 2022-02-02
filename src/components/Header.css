@@ -1,0 +1,114 @@
+header {
+  width: 730px;
+  margin: 0 auto;
+  padding: 6vw 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.fillter-by-status,
+.toggle-btn {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+.fillter-by-status {
+  background: transparent;
+  margin-right: 25px;
+  color: var(--headingColor);
+  z-index: 4;
+  height: 30px;
+}
+.fillter-by-status img {
+  margin-left: 10px;
+}
+.fillter-toggle {
+  display: flex;
+  align-items: center;
+}
+.toggle-btn {
+  background: var(--purple);
+  width: 150px;
+  height: 48px;
+  border-radius: 24px;
+  color: var(--white);
+}
+.toggle-btn:hover {
+  background: rgb(146, 119, 255);
+}
+.toggle-btn img {
+  background: var(--white);
+  border-radius: 50%;
+  padding: 10px;
+  margin-left: 8px;
+  margin-right: 10px;
+}
+.fillter-drop-down-div {
+  position: absolute;
+}
+.fillter-drop-down {
+  position: relative;
+  background: var(--cardsBg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 15px;
+  border-radius: 10px;
+  width: 192px;
+  height: 128px;
+  bottom: -90px;
+  left: -40px;
+  box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.2);
+}
+.fillter-drop-down label {
+  color: var(--headingColor);
+  font-weight: 600;
+  padding: 5px;
+  cursor: pointer;
+}
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  background-color: var(--checkBoxBg);
+  margin-right: 5px;
+  cursor: pointer !important;
+  border-radius: 2px;
+}
+.fillter-drop-down label:hover input[type="checkbox"] {
+  border: 1px solid var(--purple);
+}
+input[type="checkbox"]:checked {
+  background-image: url("../assets/icons/icon-check.svg");
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-color: var(--purple);
+}
+
+@media (max-width: 767px) {
+  header {
+    width: 88%;
+  }
+  h1 {
+    font-size: 22px;
+  }
+  header p {
+    font-size: 16px;
+  }
+  .toggle-btn {
+    width: 90px;
+    height: 44px;
+  }
+  .text-display-none {
+    display: none;
+  }
+  .fillter-by-status-span {
+    display: none;
+  }
+  .fillter-by-status {
+    margin-right: 10px;
+  }
+}

@@ -1,0 +1,345 @@
+.singleCardContainer {
+  width: 730px;
+  margin: 0 auto;
+}
+.single-card-btn-back {
+  background: transparent;
+  color: var(--headingColor);
+  font-weight: 700;
+  font-size: 16px;
+  margin-top: 50px;
+  margin-bottom: 15px;
+}
+.single-card-btn-back img {
+  margin-right: 20px;
+  height: 13px;
+  width: 8px;
+}
+.singleCard {
+  display: grid;
+  grid-template:
+    "status btns"
+    "main main";
+  grid-auto-columns: 50% 50%;
+  grid-template-rows: auto auto;
+}
+.singleCard h2 {
+  font-size: 14px;
+  line-height: 32px;
+}
+.singleCard p {
+  font-weight: 500;
+}
+.singleCardStatus p {
+  color: var(--gray);
+  margin-right: 25px;
+}
+.singleCardStatus {
+  display: flex;
+  align-items: center;
+  padding-left: 35px;
+  grid-area: status;
+  background: var(--inputBg);
+  height: 88px;
+  border-radius: 15px 0 0 15px;
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.05);
+  clip-path: inset(-15px 0px -15px -15px);
+}
+
+.singleCardBtns {
+  grid-area: btns;
+  background: var(--inputBg);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 35px;
+  height: 88px;
+  border-radius: 0 15px 15px 0;
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.05);
+  clip-path: inset(-15px -15px -15px 0px);
+}
+.edit-btn {
+  width: 73px;
+  color: var(--addNewItemFont);
+  background: var(--addNewItemBg);
+}
+.edit-btn:hover {
+  color: rgb(126, 136, 195);
+  background: var(--draftBtnBGHover);
+}
+.red-btn {
+  background: var(--red);
+  color: white;
+  width: 89px;
+  margin: 0 10px;
+}
+.red-btn:hover {
+  background: var(--redHover);
+}
+.singleCardContainer .purple-submit-btn {
+  margin-left: 0;
+}
+.singleCardMain {
+  grid-area: main;
+  background: var(--inputBg);
+  border-radius: 15px;
+  margin-top: 25px;
+  padding: 35px 50px;
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.05);
+}
+.singleCardMainTop {
+  display: flex;
+  justify-content: space-between;
+}
+.singleCardMainTopID {
+  color: var(--headingColor);
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 25px;
+}
+.singleCardMainTopID span {
+  color: rgb(126, 136, 195);
+}
+.singleCardMainTopSenderAddress {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 25px;
+}
+.singleCardMainTopSenderAddress p {
+  line-height: 16px;
+}
+.singleCardMainMid {
+  display: flex;
+  color: var(--headingColor);
+}
+.singleCardMainMidDate,
+.singleCardMainMidBill {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+}
+#payment-date {
+  margin-top: 20px;
+}
+
+.singleCardMainMidBill p {
+  line-height: 16px;
+}
+.singleCardMainMidSentTo {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+.singleCardMainBottom {
+  background: var(--addNewItemBg);
+  padding-top: 20px;
+  border-radius: 15px;
+  margin-top: 50px;
+}
+.singleCardMainBottomDiv {
+  display: flex;
+  margin: 15px 25px;
+}
+.singleCardMainBottomleft {
+  display: flex;
+  width: 80%;
+}
+.singleCardMainBottomleft p,
+#singleCardMainBottomleftFirst,
+.singleCardMainBottomleft div h2 {
+  width: 50%;
+}
+.singleCardMainBottomleft div {
+  display: flex;
+  width: 50%;
+}
+.singleCardMainBottomleft div p:first-child,
+.singleCardMainBottomleft div h2:first-child {
+  text-align: center;
+}
+.singleCardMainBottomleft div p:last-child,
+.singleCardMainBottomleft div h2:last-child {
+  text-align: right;
+}
+.singleCardMainBottomright {
+  width: 20%;
+  text-align: right;
+}
+.singleCardMainBottomTotal {
+  background: var(--singleCardMainBottomTotalBG);
+  padding: 25px;
+  border-radius: 0 0 15px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.singleCardMainBottomTotal h2 {
+  font-size: 32px;
+  color: white;
+}
+.singleCardMainBottomTotal p {
+  color: white;
+}
+.singleCardMainBottomleft div h2:first-child span {
+  display: none;
+}
+.singleCardContainer-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  min-height: calc(100vh - 80px);
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 5;
+}
+.singleCardContainer-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 480px;
+  height: 250px;
+  background: var(--inputBg);
+  z-index: 6;
+  border-radius: 5px;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.singleCardContainer-modal h2 {
+  margin-bottom: 15px;
+}
+.singleCardContainer-modal-btns {
+  display: flex;
+  justify-content: flex-end;
+}
+.singleCardContainer-modal-btns .edit-btn {
+  width: 91px;
+}
+.singleCardContainer-modal-btns .red-btn {
+  margin: 0 0 0 10px;
+}
+
+@media (max-width: 767px) {
+  .singleCardContainer {
+    width: 90%;
+  }
+  .singleCard {
+    display: grid;
+    grid-template:
+      "status status"
+      "main main"
+      "btns btns";
+    grid-auto-columns: 50% 50%;
+    grid-template-rows: auto auto auto;
+  }
+  .singleCardStatus,
+  .singleCardBtns {
+    justify-content: space-between;
+    padding: 0 35px;
+    border-radius: 15px;
+    clip-path: inset(-15px -15px -15px -15px);
+  }
+  .singleCardBtns {
+    margin-bottom: 25px;
+  }
+  .singleCardMain {
+    margin: 25px 0;
+  }
+  .edit-btn {
+    width: 20%;
+  }
+  .red-btn {
+    width: 25%;
+  }
+  .singleCardBtns .purple-submit-btn {
+    width: calc(55% - 20px);
+  }
+  .singleCardMain {
+    padding: 30px;
+  }
+  .singleCardMainTop {
+    flex-direction: column;
+  }
+  .singleCardMainMid {
+    flex-wrap: wrap;
+  }
+  .singleCardMainMidDate,
+  .singleCardMainMidBill {
+    width: 50%;
+  }
+  .singleCardMainMidSentTo {
+    width: 100%;
+    margin-top: 25px;
+  }
+  .singleCardMainBottomDiv:first-child {
+    display: none;
+  }
+  .singleCardMainBottomleft {
+    flex-direction: column;
+    width: 60%;
+  }
+  .singleCardMainBottomright {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .singleCardMainBottomleft div h2:first-child,
+  .singleCardMainBottomleft div h2:last-child {
+    text-align: left;
+    color: var(--gray);
+  }
+  #singleCardMainBottomleftFirst,
+  .singleCardMainBottomleft div h2 {
+    width: auto;
+  }
+  .singleCardMainBottomleft div h2:first-child span {
+    display: inline;
+  }
+  .singleCardMainBottomleft div {
+    width: 100%;
+  }
+  .singleCardContainer-modal {
+    width: 90%;
+    height: auto;
+  }
+  .singleCardContainer-modal h2 {
+    margin-bottom: 0;
+  }
+  .singleCardContainer-modal p {
+    margin: 25px 0;
+  }
+  .singleCardContainer-modal-btns .edit-btn,
+  .singleCardContainer-modal-btns .red-btn {
+    width: 91px;
+  }
+}
+@media (max-width: 450px) {
+  .singleCardStatus,
+  .singleCardBtns {
+    padding: 0 15px;
+  }
+  .edit-btn {
+    width: 25%;
+  }
+  .red-btn {
+    width: 30%;
+  }
+  .singleCardBtns .purple-submit-btn {
+    width: calc(45% - 20px);
+  }
+  .singleCardMain {
+    padding: 25px 15px;
+  }
+}
+@media (max-width: 350px) {
+  .singleCardMainBottomTotal h2 {
+    font-size: 26px;
+  }
+  .singleCardContainer-modal {
+    padding: 50px 25px;
+  }
+}

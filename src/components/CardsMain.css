@@ -1,0 +1,126 @@
+main {
+  width: 730px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+.card {
+  display: grid;
+  margin-bottom: 20px;
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.05);
+  padding: 15px 25px;
+  border-radius: 5px;
+  background: var(--inputBg);
+  cursor: pointer;
+  grid-template: "id paymentDue name total btn";
+  grid-auto-columns: 20% 20% 20% 20% 20%;
+  grid-template-rows: auto;
+}
+.card-id {
+  grid-area: id;
+  color: var(--headingColor);
+  font-weight: 700;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.card-paymentDue {
+  grid-area: paymentDue;
+  color: var(--labelColor);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-clientName {
+  grid-area: name;
+  color: var(--labelColor);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-total {
+  grid-area: total;
+  color: var(--headingColor);
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-right {
+  grid-area: btn;
+  display: flex;
+  justify-content: flex-end;
+}
+.card-status-btn-green,
+.card-status-btn-orange,
+.card-status-btn-gray {
+  width: 104px;
+  height: 40px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+  font-weight: 700;
+}
+.card-status-btn-green {
+  color: rgb(51, 514, 159);
+  background: rgba(51, 514, 159, 0.1);
+}
+.card-status-btn-orange {
+  color: rgb(255, 143, 0);
+  background: rgba(255, 143, 0, 0.1);
+}
+.card-status-btn-gray {
+  color: var(--draftBtnFont);
+  background: var(--draftBtnBG);
+}
+.card-status-btn .dot {
+  font-size: 20px;
+}
+.card-status-btn .span::first-letter {
+  text-transform: uppercase;
+}
+.card-right {
+  display: flex;
+  align-items: center;
+}
+.card-id span {
+  color: rgb(126, 136, 195);
+}
+@media (max-width: 767px) {
+  main {
+    width: 88%;
+  }
+  .card {
+    grid-template:
+      "id name"
+      "paymentDue btn"
+      "total btn";
+    grid-auto-columns: 50% 50%;
+    grid-template-rows: auto auto auto;
+  }
+
+  .card-paymentDue {
+    margin-top: 25px;
+    justify-content: flex-start;
+  }
+  .card-clientName {
+    justify-content: flex-end;
+  }
+  .card-total {
+    margin-top: 10px;
+    justify-content: flex-start;
+  }
+  .card-right {
+    margin-top: 25px;
+  }
+  .card-status-btn-green,
+  .card-status-btn-orange,
+  .card-status-btn-gray {
+    margin-right: 0;
+  }
+  .card-arrow {
+    display: none;
+  }
+}
